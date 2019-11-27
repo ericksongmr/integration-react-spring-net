@@ -1,4 +1,5 @@
 export default {
   CREATE_USER: "CREATE_USER",
-  LOAD_USERS: "LOAD_USERS"
+  LOAD_USERS: "LOAD_USERS",
+  GET_USER: "GET_USER"
 };

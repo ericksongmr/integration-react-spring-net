@@ -17,7 +17,8 @@ class AuthService {
 
   getAuthHeader() {
     return {
-      headers: { Authorization: "Bearer " + this.getUserInfo().bearerToken }
+      "content-type": "application/json",
+      Authorization: "Bearer " + this.getUserInfo().bearerToken
     };
   }
 
