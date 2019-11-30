@@ -1,6 +1,5 @@
 import React from "react";
-import FirstNameInput from "../common/FirstNameInput";
-import LastNameInput from "../common/LastNameInput";
+import TextInput from "../common/TextInput";
 import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 
@@ -11,7 +10,7 @@ function CustomerForm(props) {
         <h2>Manage Customer</h2>
         <div className="form-manage">
           <form onSubmit={props.onSubmit}>
-            <FirstNameInput
+            <TextInput
               id="firsName"
               name="firsName"
               label="firsName"
@@ -20,7 +19,7 @@ function CustomerForm(props) {
               error={props.errors.firstName}
             />
 
-            <LastNameInput
+            <TextInput
               id="lastName"
               name="lastName"
               label="lastName"

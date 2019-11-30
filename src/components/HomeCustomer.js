@@ -1,5 +1,5 @@
 import React from "react";
-import HomeCustomer from "./common/HeaderUser";
+import HeaderCustomer from "./common/HeaderUser";
 
 function HomeCustomer() {
   return (

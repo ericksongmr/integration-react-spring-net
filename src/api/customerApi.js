@@ -24,7 +24,7 @@ export function saveCustomer(customer) {
     method: "POST",
     headers: authService.getAuthHeader(),
     body: JSON.stringify({
-      ...user
+      ...customer
     })
   })
     .then(handleResponse)

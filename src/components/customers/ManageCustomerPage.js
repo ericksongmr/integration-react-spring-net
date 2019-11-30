@@ -20,7 +20,7 @@ const ManageCustomerPage = props => {
     customerStore.addChangeListener(onChange);
     const id = props.match.params.id;
     if (customers.length === 0) {
-      customerActions.loadUsers();
+      customerActions.loadCustomers();
     } else if (id) {
       setCustomer(customerStore.getCustomerById(id));
     }

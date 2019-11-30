@@ -1,5 +1,5 @@
 import dispatcher from "../appDispatcher";
-import * as userApi from "../api/customerApi";
+import * as customerApi from "../api/customerApi";
 import actionTypes from "./actionTypes";
 
 export function saveCustomer(customer) {
