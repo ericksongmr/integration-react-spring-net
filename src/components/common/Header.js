@@ -32,7 +32,7 @@ function Header() {
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink className="nav-link" activeStyle={activeStyle} to="#">
+            <NavLink className="nav-link" activeStyle={activeStyle} to="/customer">
               Customers
             </NavLink>
           </li>
