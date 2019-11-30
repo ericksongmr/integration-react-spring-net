@@ -24,11 +24,10 @@ function App() {
         <Route path="/user/:id" component={ViewClaims} />
         <Route path="/createUser" component={ManageUserPage} />
         <Route path="/my-account" component={HomeUser} />
-        <Route component={NotFoundPage} />
-
         <Route path="/customers" component={CustomerPage} />
         <Route path="/customer/:id" component={ViewAccounts} />
         <Route path="/createCustomer" component={ManageCustomerPage} />
+        <Route component={NotFoundPage} />
       </Switch>
     </div>
   );

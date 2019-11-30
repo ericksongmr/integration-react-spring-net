@@ -21,7 +21,7 @@ const ViewAccounts = props => {
     setCustomer(customerStore.getCustomerById());
   }
 
-  const accounts = customer.accounts || [];
+  const accounts = customer.data || [];
 
   return (
     <>
@@ -40,10 +40,11 @@ const ViewAccounts = props => {
                 <th>Accounts</th>
               </tr>
             </thead>
-            <tbody>
+            {accounts.length > 0 ? (
+              <tbody>
               <tr>
-                <td>{customer.firstName}</td>
-                <td>{customer.lastName}</td>
+                <td>{accounts[0].customer.firstName}</td>
+                <td>{accounts[0].customer.lastName}</td>
                 <td>
                   <ul>
                     {accounts.map(account => {
@@ -56,7 +57,8 @@ const ViewAccounts = props => {
                   </ul>
                 </td>
               </tr>
-            </tbody>
+              </tbody>
+            ) : (<tr><td colSpan={3}></td></tr>)}
           </table>
         </div>
       </main>

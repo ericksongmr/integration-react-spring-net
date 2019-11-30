@@ -31,7 +31,7 @@ function CustomersPage() {
           >
             Add Customer
           </Link>
-          <CustomerList Customers={customers} />
+          <CustomerList customers={customers} />
         </div>
       </main>
     </>

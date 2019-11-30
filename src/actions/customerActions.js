@@ -15,7 +15,7 @@ export function loadCustomers() {
   return customerApi.getCustomers().then(customers => {
     dispatcher.dispatch({
       actionType: actionTypes.LOAD_CUSTOMERS,
-      customers: customers
+      customers: customers.data
     });
   });
 }

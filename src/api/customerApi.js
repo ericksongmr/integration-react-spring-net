@@ -12,7 +12,7 @@ export function getCustomers() {
 }
 
 export function getCustomerById(id) {
-  return fetch(baseUrl + "/" + id, {
+  return fetch(baseUrl + "/" + id + "/accounts", {
     headers: authService.getAuthHeader()
   })
     .then(handleResponse)
