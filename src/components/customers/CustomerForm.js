@@ -11,9 +11,9 @@ function CustomerForm(props) {
         <div className="form-manage">
           <form onSubmit={props.onSubmit}>
             <TextInput
-              id="firsName"
-              name="firsName"
-              label="firsName"
+              id="firstName"
+              name="firstName"
+              label="firstName"
               onChange={props.onChange}
               value={props.customer.firstName}
               error={props.errors.firstName}
