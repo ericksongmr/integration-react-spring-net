@@ -28,3 +28,12 @@ export function loadCustomerById(id) {
     });
   });
 }
+
+export function saveTransaction(transaction) {
+  return customerApi.saveTransaction(transaction).then(responseTransaction => {
+    dispatcher.dispatch({
+      actionType: actionTypes.CREATE_TRANSACTION,
+      responseTransaction: responseTransaction
+    });
+  });
+}

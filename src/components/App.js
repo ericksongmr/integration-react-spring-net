@@ -8,6 +8,8 @@ import ManageUserPage from "./users/ManageUserPage";
 import ManageCustomerPage from "./customers/ManageCustomerPage";
 import ViewClaims from "./users/ViewClaims";
 import ViewAccounts from "./customers/ViewAccounts";
+import TransactionsPage from "./transactions/TransactionsPage";
+import ManageTransactionPage from "./transactions/ManageTransactionPage";
 import { Route, Switch } from "react-router-dom";
 import NotFoundPage from "./NotFoundPage";
 import { ToastContainer } from "react-toastify";
@@ -27,6 +29,8 @@ function App() {
         <Route path="/customers" component={CustomerPage} />
         <Route path="/customer/:id" component={ViewAccounts} />
         <Route path="/createCustomer" component={ManageCustomerPage} />
+        <Route path="/transactions" component={TransactionsPage} />
+        <Route path="/createTransaction" component={ManageTransactionPage} />
         <Route component={NotFoundPage} />
       </Switch>
     </div>

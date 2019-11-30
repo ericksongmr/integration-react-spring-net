@@ -5,6 +5,8 @@ import actionTypes from "../actions/actionTypes";
 const CHANGE_EVENT = "change";
 let _customers = [];
 let _customer = [];
+let _transaction = [];
+let _responseTransaction = [];
 
 class CustomerStore extends EventEmitter {
   addChangeListener(callback) {
@@ -26,6 +28,14 @@ class CustomerStore extends EventEmitter {
   getCustomerById() {
     return _customer;
   }
+
+  getResponseTransaction() {
+    return _responseTransaction;
+  }
+
+  getTransaction() {
+    return _transaction;
+  }
 }
 
 const store = new CustomerStore();
@@ -42,6 +52,10 @@ Dispatcher.register(action => {
       break;
     case actionTypes.GET_CUSTOMER:
       _customer = action.customer;
+      store.emitChange();
+      break;
+    case actionTypes.CREATE_TRANSACTION:
+      _responseTransaction = action.responseTransaction;
       store.emitChange();
       break;
     default:

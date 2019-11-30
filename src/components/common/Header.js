@@ -37,12 +37,7 @@ function Header() {
             </NavLink>
           </li>
           <li className="nav-item">
-            <NavLink className="nav-link" activeStyle={activeStyle} to="#">
-              Accounts
-            </NavLink>
-          </li>
-          <li className="nav-item">
-            <NavLink className="nav-link" activeStyle={activeStyle} to="#">
+            <NavLink className="nav-link" activeStyle={activeStyle} to="/transactions">
               Transactions
             </NavLink>
           </li>

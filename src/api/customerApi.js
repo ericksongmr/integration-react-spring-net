@@ -2,6 +2,7 @@ import { handleResponse, handleError } from "./apiUtils";
 import authService from "../services/AuthService";
 
 const baseUrl = process.env.API_URL + "/api/customers";
+const baseTransactionsUrl = process.env.API_URL + "/api/transactions/transfer";
 
 export function getCustomers() {
   return fetch(baseUrl, {
@@ -25,6 +26,18 @@ export function saveCustomer(customer) {
     headers: authService.getAuthHeader(),
     body: JSON.stringify({
       ...customer
+    })
+  })
+    .then(handleResponse)
+    .catch(handleError);
+}
+
+export function saveTransaction(transaction) {
+  return fetch(baseTransactionsUrl, {
+    method: "POST",
+    headers: authService.getAuthHeader(),
+    body: JSON.stringify({
+      ...transaction
     })
   })
     .then(handleResponse)
